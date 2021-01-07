@@ -1,10 +1,14 @@
 import "./index.css";
 import AddIcon from "@material-ui/icons/Add";
 import Button from "@material-ui/core/Button";
+import Input from './Input'; 
+import List from './List';
+import { useState } from "react";
 
+const App = () => {    
 
-const App = () => {   
-
+    const [flag, setFlag] = useState(false);
+     
   return (
     <>
       <div className="top_div">
@@ -12,18 +16,19 @@ const App = () => {
           <h1> ToDo List</h1>
         </div>
         <div className="row2">
-          <Button>
+          <Button
+            onClick={() => {
+              setFlag(true);
+            }}
+          >             
             <AddIcon />
           </Button>
         </div>
       </div>
-      <br/>
-      <hr />
-
-
-          <div className="line_div">
-
-          </div>
+      <br />
+      <hr />                
+                
+      { flag?<Input/>:<List/>} 
           
     </>
   );
