@@ -3,7 +3,9 @@ import AddIcon from "@material-ui/icons/Add";
 import Input from './Input';  
 import { useState } from "react";
 
- const App = () => {
+const App = () => {
+  
+   /* Used to check whether 'plus' button is clicked or not */
    const [flag, setFlag] = useState(false);
 
    return (
