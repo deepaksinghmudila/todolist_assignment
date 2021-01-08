@@ -1,13 +1,61 @@
- .top_div{             
-       height: 50px;        
-       margin: 10px auto;
-       padding: 1px;
+body{
+   background-color:#484848;
+   color: white;
+} 
+h1{
+    color: gold;
+}
+.top_div{             
+       height: 5em;        
+       margin: 0.5em auto;
+       padding: 0.5em;
+       border:0px solid red;
  }
- .row1 {
+ .left {
      float: left;
-     padding-left: 10px;            
+     padding: 0.1em;            
+     border:0px solid green;
  }
- .row2 {
+ .right {
      float: right;
-     padding-right: 10px;      
- }   
+     margin-top: 1.3em;      
+     padding-right: 0.4em;      
+ }  
+ li {
+     list-style-type: none;
+     font-size: 1.4em;      
+     font-family: Arial, Helvetica, sans-serif;
+     margin-left: 0.5em; 
+     border:0px solid blueviolet;
+ }
+ .list_item{
+     border: 0px solid yellow;
+     padding:0.4em;
+     margin-top: 0.5em;
+ }
+ .line{
+     padding-left: 0.8em;
+     padding-right: 0.7em;     
+ }
+  .line_div {
+      border: 0px solid lawngreen;
+      padding-left: 3.9em;
+      padding-right: 0.7em;
+  }
+  input[type=radio] {            
+      width: 2%;
+      height: 1.6em;             
+  } 
+.input_div{
+    border: 0px solid yellow;    
+    margin-left: 1.2em;
+}
+.task_field{      
+        width:54em; 
+        height:2em;
+        background-color:#484848;
+        outline-style:none;
+        border-style: none;         
+        color:white;  
+        font-size: 1.4em;
+}

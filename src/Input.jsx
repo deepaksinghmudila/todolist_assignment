@@ -2,10 +2,11 @@ import React from "react";
 import List from './List'; 
 import { useState } from "react";
 
-const Input = () => {
+const Input = (props) => {
     
      const [item, setItem] = useState();      
-     const [listItem, setAddItem] = useState(["Reading","Swimming","Cricket"]); 
+     const [listItem, setAddItem] = useState(["Yoga class","Swimming","Reading"]); 
+     
     
     const listOfItems = () => {
             setAddItem((oldItems) => {
@@ -27,21 +28,33 @@ const Input = () => {
     return (
       <>
         <div className="row4">
-          <ul>
-            {listItem.map((itemval, index) => {
-              return <List key={index} id={index} item={itemval} />;
-            })}
-          </ul>
+          {listItem.map((itemval, index) => {
+            return <List key={index} id={index} item={itemval} />;
+          })}
         </div>
 
         <div className="input_div">
-          <ul>                 
-                <input                  
+          {props.value ? (
+            <ul>
+              <input                
+                type="text"
                 onChange={inputItem}
                 value={item}
                 onKeyDown={keyPress}
-             />
-          </ul>
+                className="task_field"
+              />
+              <hr/>
+            </ul>
+          ) : (
+            <ul>
+              <input
+                hidden="yes"
+                onChange={inputItem}
+                value={item}
+                onKeyDown={keyPress}
+              />
+            </ul>
+          )}
         </div>
       </>
     );
